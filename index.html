@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<body>
+
+<div class="container" ng-app="myApp" ng-controller="myCtrl"> 
+  <h3>Championships</h3>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Sename</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="country in countries">
+        <td>{{country.id_championship}}</td>
+        <td>
+          <img src="img/flags/{{driver.Driver.nationality}}.png" />
+          {{country.name}}
+        </td>
+        <td>{{country.sename}}</td>
+        <td>{{country.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+  $http.get("https://footballbet.com.ua/api/championships/")
+  .then(function(response) {
+      $scope.countries = response.data.result;
+  });
+});
+</script>
+
+</body>
+</html>
