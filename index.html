@@ -6,7 +6,7 @@
 <body>
 
 <div ng-app="main" ng-controller="championships">
-  <p>Championships</p>
+  <p>Чемпіонат</p>
   <img src="https://footballbet.com.ua/table/embl/{{selectedCountry}}.jpg" alt="Сhampionship emblem" height="42" width="42" />
   <select ng-model="selectedCountry"> 
     <option ng-repeat="country in countries" value={{country.title}}>{{country.name}} "{{country.sename}}"</option>
