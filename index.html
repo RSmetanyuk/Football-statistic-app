@@ -5,12 +5,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <body>
 
-<div ng-app="main" ng-controller="championships">
-  <p>Чемпіонат</p>
-  <img src="https://footballbet.com.ua/table/embl/{{selectedCountry}}.jpg" alt="Сhampionship emblem" height="42" width="42" />
-  <select ng-model="selectedCountry"> 
-    <option ng-repeat="country in countries" value={{country.title}}>{{country.name}} "{{country.sename}}"</option>
-  </select>
+<div class="container" ng-app="main" ng-controller="championships">
+  <div class="col-sm-1">
+    <img ng-if="selectedCountry" src="https://footballbet.com.ua/table/embl/{{selectedCountry}}.jpg" alt="Сhampionship emblem" height="48" width="48" />
+  </div>
+  <div class="col-sm-3">
+    <p>Чемпіонат</p>  
+    <select ng-model="selectedCountry" ng-init="selectedCountry != ''"> 
+      <option ng-repeat="country in countries" value={{country.title}}>{{country.name}} "{{country.sename}}"</option>
+    </select>
+  </div>
 </div>
 
 </body>
