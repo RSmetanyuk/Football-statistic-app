@@ -4,9 +4,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="module.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 <body>
 
-<div class="container" ng-app="main" ng-controller="championships">
+<div class="container-fluid header">
+  <div class="container">
+    <img class="logo" src="img/logo.png" alt="Soccer ball">
+    <h2>Angular JS football statistic aplication</h2>
+  </div>
+</div>
+
+<div class="container mainContent" ng-app="main" ng-controller="championships">
   <div class="col-sm-1">
     <img ng-if="selectedCountry" src="https://footballbet.com.ua/table/embl/{{selectedCountry}}.jpg" alt="Сhampionship emblem" height="48" width="48" />
   </div>
