@@ -15,15 +15,20 @@
 </div>
 
 <div class="container mainContent" ng-app="main" ng-controller="championships">
-  <div class="col-sm-1">
-    <img ng-if="selectedCountry" src="https://footballbet.com.ua/table/embl/{{selectedCountry}}.jpg" alt="Сhampionship emblem" height="48" width="48" />
-  </div>
-  <div class="col-sm-3">
-    <p>Чемпіонат</p>  
-    <select ng-model="selectedCountry" ng-init="selectedCountry != ''"> 
-      <option ng-repeat="country in countries" value={{country.title}}>{{country.name}} "{{country.sename}}"</option>
-    </select>
-  </div>
+
+  <table>
+    <head>
+      <tr>
+        <th>Championships</th>
+      </tr>
+    </head>
+    <tbody>
+      <tr ng-repeat="country in countries" value={{country.title}}>
+        <td><img src="https://footballbet.com.ua/table/embl/{{country.title}}.jpg" height="35" width="35" />  {{country.name}} "{{country.sename}}"</td>
+      </tr>
+    </tbody>
+  </table>
+
 </div>
 
 </body>
