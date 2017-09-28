@@ -25,10 +25,6 @@ img {
   float: left;
 }
 
-.sub-header h2 {
-  display: inline-block;
-}
-
 .sub-header a {
   margin-right: 30px;
 }
