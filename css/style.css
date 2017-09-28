@@ -23,6 +23,12 @@ h2 {
   border: 1px solid #80ff80;
   border-radius: 5px;
   margin-top: 5px;
+  padding: 5px;
+  background-color: #e6ffe6;
+}
+
+table {
+  background-color: white;
 }
 
 table tr { 
@@ -30,5 +36,15 @@ table tr {
 }
 
 table, th, td {
-   border: 1px solid black;
+   border: 1px solid #c4edd8;
+}
+
+.matches td {
+    padding-left: 10px;
+    padding-right: 10px;  
+    text-align: center;
+}
+
+th {
+  text-align: center;
 }
