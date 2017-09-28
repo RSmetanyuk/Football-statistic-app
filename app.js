@@ -9,6 +9,10 @@ app.config(function($routeProvider){
   .when('/teams', {
     templateUrl:'templates/teams.template.html',
     controller:'teamscontroler'
+  })
+  .when('/matches', {
+    templateUrl:'templates/matches.template.html',
+    controller:'matchescontroler'
   });
 });
 
@@ -19,10 +23,16 @@ app.controller('championshipscontroler', function($scope, $http) {
   });
 });
 
-
 app.controller('teamscontroler', function($scope, $http) {
   $http.get("https://footballbet.com.ua/api/teams/")
   .then(function(response) {
       $scope.teams = response.data.result;
+  });
+});
+
+app.controller('matchescontroler', function($scope, $http) {
+  $http.get("https://footballbet.com.ua/api/matches/")
+  .then(function(response) {
+      $scope.matches = response.data.result;
   });
 });

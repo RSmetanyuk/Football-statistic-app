@@ -1,5 +1,5 @@
 div {
-    /*border: 1px solid black;*/
+  border: 1px solid black;
 }
 
 /**********************************************************/
@@ -27,4 +27,8 @@ h2 {
 
 table tr { 
   line-height: 37px;
+}
+
+table, th, td {
+   border: 1px solid black;
 }

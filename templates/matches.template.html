@@ -1,0 +1,18 @@
+    <div class="container">
+      <table>
+        <head>
+          <tr>
+            <th>Date</th>
+            <th>Championship</th>
+            <th>Match</th>
+          </tr>
+        </head>
+        <tbody>
+          <tr ng-repeat="match in matches">
+            <td>{{match.date}}   </td>
+            <td>{{match.title}}  </td>
+            <td>{{match.firstTeam}} {{match.firstTeamGoal}}:{{match.secondTeamGoal}} {{match.secondTeam}}</td>           
+          </tr>
+        </tbody>
+      </table>
+    </div>
