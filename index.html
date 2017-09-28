@@ -13,23 +13,19 @@
 <body ng-app="main">
 
   <div class="container-fluid header">
-    <div class="container">
+    <div class="container sub-header">
       <img class="logo" src="img/logo1.jpg" alt="Soccer ball">
       <h2>Angular JS football statistic aplication</h2>
+      <br>
+      <a href="#!championships">Championships</a>
+      <a href="#!teams">Teams</a>
+      <a href="#!matches">Matches</a>
+      <a href="#!about">About</a>
     </div>
   </div>
 
-  <div class="container mainContent">
-    <div class="col-sm-2">
-      <ul>
-        <li><a href="#!championships">Championships</a></li>
-        <li><a href="#!teams">Teams</a></li>
-        <li><a href="#!matches">Matches</a></li>       
-      </ul>
-    </div>
-    
-    <div class="col-sm-8" ng-view></div>
-    
+  <div class="container mainContent">  
+    <div ng-view></div>    
   </div>
 
 </body>

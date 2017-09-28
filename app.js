@@ -13,6 +13,9 @@ app.config(function($routeProvider){
   .when('/matches', {
     templateUrl:'templates/matches.template.html',
     controller:'matchescontroler'
+  })
+  .when('/about', {
+    templateUrl:'templates/about.template.html'
   });
 });
 

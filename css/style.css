@@ -1,6 +1,12 @@
+/*
 div {
-  /*border: 1px solid black;*/
+  border: 1px solid black;
 }
+
+img {
+  border: 1px solid black;
+}
+*/
 
 /**********************************************************/
 
@@ -15,8 +21,16 @@ div {
   border-radius: 5px;
 }
 
-h2 {
+.sub-header img {
+  float: left;
+}
+
+.sub-header h2 {
   display: inline-block;
+}
+
+.sub-header a {
+  margin-right: 30px;
 }
 
 .mainContent {
