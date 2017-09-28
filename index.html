@@ -20,11 +20,14 @@
   </div>
 
   <div class="container mainContent">
-
-    <a href="#!championships">Championships</a>
-    <a href="#!teams">Teams</a>
-
-    <div ng-view></div>
+    <div class="col-sm-2">
+      <ul>
+        <li><a href="#!championships">Championships</a></li>
+        <li><a href="#!teams">Teams</a></li>        
+      </ul>
+    </div>
+    
+    <div class="col-sm-8" ng-view></div>
     
   </div>
 

@@ -1,16 +1,15 @@
 var app = angular.module('main', ["ngRoute"]);
 
 app.config(function($routeProvider){
-        $routeProvider.when('/championships',
-        {
-            templateUrl:'templates/championships.template.html',
-            controller:'championshipscontroler'
-        });
-        $routeProvider.when('/teams',
-        {
-            templateUrl:'templates/teams.template.html',
-            controller:'teamscontroler'
-        });
+  $routeProvider
+  .when('/championships', {
+    templateUrl:'templates/championships.template.html',
+    controller:'championshipscontroler'
+  })
+  .when('/teams', {
+    templateUrl:'templates/teams.template.html',
+    controller:'teamscontroler'
+  });
 });
 
 app.controller('championshipscontroler', function($scope, $http) {
