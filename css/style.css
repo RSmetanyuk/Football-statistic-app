@@ -41,6 +41,10 @@ table {
   background-color: white;
 }
 
+th {
+  text-align: center;
+}
+
 tr { 
   line-height: 37px;
 }
@@ -55,9 +59,5 @@ th, td {
 }
 
 .matches td { 
-  text-align: center;
-}
-
-th {
   text-align: center;
 }
