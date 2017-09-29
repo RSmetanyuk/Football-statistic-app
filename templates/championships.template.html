@@ -1,14 +1,21 @@
-    <div class="container">
-      <table>
-        <head>
-          <tr>
-            <th>Championships</th>
-          </tr>
-        </head>
-        <tbody>
-          <tr ng-repeat="country in countries">
-            <td><img src="https://footballbet.com.ua/table/embl/{{country.title}}.jpg" height="35" width="35" />  {{country.name}} "{{country.sename}}"</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="container">
+  <table>
+    <head>
+      <tr>
+        <th>Championships</th>
+      </tr>
+    </head>
+    <tbody>
+      <tr dir-paginate="country in countries|itemsPerPage:10">
+        <td>
+          <img src="https://footballbet.com.ua/table/embl/{{country.title}}.jpg" height="35" width="35" />  {{country.name}} "{{country.sename}}"
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<dir-pagination-controls
+  max-size="5"
+  direction-links="true"
+  boundary-links="true" >
+</dir-pagination-controls>
