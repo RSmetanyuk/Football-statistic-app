@@ -41,17 +41,20 @@ table {
   background-color: white;
 }
 
-table tr { 
+tr { 
   line-height: 37px;
 }
 
-table, th, td {
+td {
+  padding-left: 10px;
+  padding-right: 10px;  
+}
+
+th, td {
    border: 1px solid #c4edd8;
 }
 
 .matches td {
-    padding-left: 10px;
-    padding-right: 10px;  
     text-align: center;
 }
 

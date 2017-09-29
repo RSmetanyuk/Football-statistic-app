@@ -6,7 +6,7 @@
           </tr>
         </head>
         <tbody>
-          <tr ng-repeat="country in countries">
+          <tr dir-paginate="country in countries|itemsPerPage:10">
             <td><img src="https://footballbet.com.ua/table/embl/{{country.title}}.jpg" height="35" width="35" />  {{country.name}} "{{country.sename}}"</td>
           </tr>
         </tbody>

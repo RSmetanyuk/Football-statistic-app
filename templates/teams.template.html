@@ -6,8 +6,10 @@
       </tr>
     </head>
     <tbody>
-      <tr ng-repeat="team in teams">
-        <td><img src="https://footballbet.com.ua/teams/embl/{{team.emblema}}" height="35" width="35" />  {{team.name}}</td>
+      <tr dir-paginate="team in teams|itemsPerPage:10">
+        <td>
+          <img src="https://footballbet.com.ua/teams/embl/{{team.emblema}}" height="35" width="35" />  {{team.name}}
+        </td>
       </tr>
     </tbody>
   </table>

@@ -8,7 +8,7 @@
           </tr>
         </head>
         <tbody>
-          <tr ng-repeat="match in matches">
+          <tr dir-paginate="match in matches|itemsPerPage:10">
             <td>{{match.date}}   </td>
             <td>{{match.title}}  </td>
             <td>{{match.firstTeam}} {{match.firstTeamGoal}}:{{match.secondTeamGoal}} {{match.secondTeam}}</td>           

@@ -6,8 +6,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
   <script src="app.js"></script>
+  <script src="dirPagination.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
 </head>
 
 <body ng-app="main">
@@ -26,6 +30,11 @@
 
   <div class="container mainContent">  
     <div ng-view></div>
+    <dir-pagination-controls
+      max-size="5"
+      direction-links="true"
+      boundary-links="true" >
+    </dir-pagination-controls>
   </div>
 
 </body>
