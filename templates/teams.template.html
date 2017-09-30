@@ -8,7 +8,7 @@
     <tbody>
       <tr dir-paginate="team in teams|itemsPerPage:10">
         <td>
-          <img src="https://footballbet.com.ua/teams/embl/{{team.emblema}}" height="35" width="35" />  {{team.name}}
+          <img src="https://footballbet.com.ua/teams/embl/{{team.emblema}}" height="35" width="35" /><a href="#!teams/{{$index}}">  {{team.name}}</a>
         </td>
       </tr>
     </tbody>

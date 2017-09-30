@@ -14,6 +14,10 @@ app.config(function($routeProvider){
     templateUrl:'templates/teams.template.html',
     controller:'teamscontroler'
   })
+  .when('/teams/:team_number', {
+    templateUrl:'templates/teams.detail.template.html',
+    controller:'teamscontroler'
+  })
   .when('/matches', {
     templateUrl:'templates/matches.template.html',
     controller:'matchescontroler'
@@ -31,14 +35,15 @@ app.controller('championshipscontroler', function($scope, $http, $routeParams) {
   });
 });
 
-app.controller('teamscontroler', function($scope, $http) {
+app.controller('teamscontroler', function($scope, $http, $routeParams) {
   $http.get("https://footballbet.com.ua/api/teams/")
   .then(function(response) {
       $scope.teams = response.data.result;
+      $scope.teamNumber = $routeParams.team_number;
   });
 });
 
-app.controller('matchescontroler', function($scope, $http) {
+app.controller('matchescontroler', function($scope, $http, $routeParams) {
   $http.get("https://footballbet.com.ua/api/matches/")
   .then(function(response) {
       $scope.matches = response.data.result;
