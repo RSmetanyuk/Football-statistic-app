@@ -22,6 +22,10 @@ app.config(function($routeProvider){
     templateUrl:'templates/matches.template.html',
     controller:'matchescontroler'
   })
+  .when('/matches/:id_match', {
+    templateUrl:'templates/matches.detail.template.html',
+    controller:'matchescontroler'
+  })
   .when('/about', {
     templateUrl:'templates/about.template.html'
   });
@@ -47,5 +51,6 @@ app.controller('matchescontroler', function($scope, $http, $routeParams) {
   $http.get("https://footballbet.com.ua/api/matches/")
   .then(function(response) {
       $scope.matches = response.data.result;
+      $scope.idMatch = $routeParams.id_match;
   });
 });
