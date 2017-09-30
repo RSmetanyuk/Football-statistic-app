@@ -39,6 +39,7 @@ img {
 
 table {
   background-color: white;
+  margin: auto;
 }
 
 th {
@@ -60,4 +61,20 @@ th, td {
 
 .matches td { 
   text-align: center;
+}
+
+.teams {
+  min-width: 220px;
+}
+
+.championships {
+  min-width: 225px;  
+}
+
+.centered {
+  text-align: center;
+}
+
+dir-pagination-controls {
+
 }
