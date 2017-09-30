@@ -6,6 +6,10 @@ app.config(function($routeProvider){
     templateUrl:'templates/championships.template.html',
     controller:'championshipscontroler'
   })
+  .when('/championships/:id_championship', {
+    templateUrl:'templates/championships.detail.template.html',
+    controller:'championshipscontroler'
+  })
   .when('/teams', {
     templateUrl:'templates/teams.template.html',
     controller:'teamscontroler'
@@ -19,10 +23,11 @@ app.config(function($routeProvider){
   });
 });
 
-app.controller('championshipscontroler', function($scope, $http) {
+app.controller('championshipscontroler', function($scope, $http, $routeParams) {
   $http.get("https://footballbet.com.ua/api/championships/")
   .then(function(response) {
       $scope.countries = response.data.result;
+      $scope.idChampionship = $routeParams.id_championship;
   });
 });
 
