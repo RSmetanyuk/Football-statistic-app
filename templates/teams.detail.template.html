@@ -2,7 +2,7 @@
   <img src="https://footballbet.com.ua/teams/embl/{{teams[teamNumber].emblema}}" />
     <h3>{{current_page}}</h3>
   <p>Назва команди: {{teams[teamNumber].name}}</p>
-  <p>Друга назва: {{teams[teamNumber].second_name}}</p>
+  <p ng-if="teams[teamNumber].second_name">Друга назва: {{teams[teamNumber].second_name}}</p>
   <p>Місто: {{teams[teamNumber].city}}</p>
   <p>Рік заснування: {{teams[teamNumber].foundation_year}}</p>
   <p>Тренер: {{teams[teamNumber].coach}}</p>
