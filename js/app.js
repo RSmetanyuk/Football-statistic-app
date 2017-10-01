@@ -28,5 +28,8 @@ app.config(function($routeProvider){
   })
   .when('/about', {
     templateUrl:'templates/about.template.html'
+  }).
+  otherwise({
+    redirectTo: '/championships'
   });
 });
