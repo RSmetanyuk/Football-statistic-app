@@ -1,16 +1,15 @@
 <div class="container centered">
-  <img src="https://footballbet.com.ua/teams/embl/{{teams[teamNumber].emblema}}" />
-    <h3>{{current_page}}</h3>
-  <p>Назва команди: {{teams[teamNumber].name}}</p>
+  <img ng-if="teams[teamNumber].emblema" src="https://footballbet.com.ua/teams/embl/{{teams[teamNumber].emblema}}" />
+  <img ng-if="!teams[teamNumber].emblema" src="/img/no_logo.png" />
+  <p ng-if="teams[teamNumber].name">Назва команди: {{teams[teamNumber].name}}</p>
   <p ng-if="teams[teamNumber].second_name">Друга назва: {{teams[teamNumber].second_name}}</p>
-  <p>Місто: {{teams[teamNumber].city}}</p>
-  <p>Рік заснування: {{teams[teamNumber].foundation_year}}</p>
-  <p>Тренер: {{teams[teamNumber].coach}}</p>
-  <p>Президент: {{teams[teamNumber].president}}</p>
-  <p>Домашній стадіон: {{teams[teamNumber].home_stadion}}</p>
-  <p>ID чемпіонату: {{teams[teamNumber].id_championship}}</p>
-  <p>ID команди: {{teams[teamNumber].id_teams}}</p>
-  <p>Веб сторінка: <a href="{{teams[teamNumber].off_site}}">{{teams[teamNumber].off_site}}</a></p>
-  <p>Нагороди: </p>
-  {{teams[teamNumber].title}}
+  <p ng-if="teams[teamNumber].city">Місто: {{teams[teamNumber].city}}</p>
+  <p ng-if="teams[teamNumber].foundation_year">Рік заснування: {{teams[teamNumber].foundation_year}}</p>
+  <p ng-if="teams[teamNumber].coach">Тренер: {{teams[teamNumber].coach}}</p>
+  <p ng-if="teams[teamNumber].president">Президент: {{teams[teamNumber].president}}</p>
+  <p ng-if="teams[teamNumber].home_stadion">Домашній стадіон: {{teams[teamNumber].home_stadion}}</p>
+  <p ng-if="teams[teamNumber].id_championship">ID чемпіонату: {{teams[teamNumber].id_championship}}</p>
+  <p ng-if="teams[teamNumber].id_teams">ID команди: {{teams[teamNumber].id_teams}}</p>
+  <p ng-if="teams[teamNumber].off_site">Веб сторінка: <a href="{{teams[teamNumber].off_site}}">{{teams[teamNumber].off_site}}</a></p>
+  <p ng-if="teams[teamNumber].title">Нагороди: {{teams[teamNumber].title}}</p>  
 </div>

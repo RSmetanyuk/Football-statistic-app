@@ -10,7 +10,7 @@
         <td>
           <img ng-if="team.emblema" src="https://footballbet.com.ua/teams/embl/{{team.emblema}}" height="35" width="35" />
           <img ng-if="!team.emblema" src="/img/no_logo.png" height="35" width="35" />
-          <a href="#!teams/{{$index}}">  {{team.name}}</a>
+          <a href="#!teams/{{team.id_teams}}">  {{team.name}}</a>
         </td>
       </tr>
     </tbody>
