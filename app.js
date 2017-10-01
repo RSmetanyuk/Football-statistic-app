@@ -4,53 +4,29 @@ app.config(function($routeProvider){
   $routeProvider
   .when('/championships', {
     templateUrl:'templates/championships.template.html',
-    controller:'championshipscontroler'
+    controller:'js/championshipscontroler'
   })
   .when('/championships/:id_championship', {
     templateUrl:'templates/championships.detail.template.html',
-    controller:'championshipscontroler'
+    controller:'js/championshipscontroler'
   })
   .when('/teams', {
     templateUrl:'templates/teams.template.html',
-    controller:'teamscontroler'
+    controller:'js/teamscontroler'
   })
   .when('/teams/:team_number', {
     templateUrl:'templates/teams.detail.template.html',
-    controller:'teamscontroler'
+    controller:'js/teamscontroler'
   })
   .when('/matches', {
     templateUrl:'templates/matches.template.html',
-    controller:'matchescontroler'
+    controller:'js/matchescontroler'
   })
   .when('/matches/:id_match', {
     templateUrl:'templates/matches.detail.template.html',
-    controller:'matchescontroler'
+    controller:'js/matchescontroler'
   })
   .when('/about', {
     templateUrl:'templates/about.template.html'
-  });
-});
-
-app.controller('championshipscontroler', function($scope, $http, $routeParams) {
-  $http.get("https://footballbet.com.ua/api/championships/")
-  .then(function(response) {
-      $scope.countries = response.data.result;
-      $scope.idChampionship = $routeParams.id_championship;
-  });
-});
-
-app.controller('teamscontroler', function($scope, $http, $routeParams) {
-  $http.get("https://footballbet.com.ua/api/teams/")
-  .then(function(response) {
-      $scope.teams = response.data.result;
-      $scope.teamNumber = $routeParams.team_number;
-  });
-});
-
-app.controller('matchescontroler', function($scope, $http, $routeParams) {
-  $http.get("https://footballbet.com.ua/api/matches/")
-  .then(function(response) {
-      $scope.matches = response.data.result;
-      $scope.idMatch = $routeParams.id_match;
   });
 });
