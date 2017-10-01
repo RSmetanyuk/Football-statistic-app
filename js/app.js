@@ -30,27 +30,3 @@ app.config(function($routeProvider){
     templateUrl:'templates/about.template.html'
   });
 });
-
-app.controller('championshipscontroler', function($scope, $http, $routeParams) {
-  $http.get("https://footballbet.com.ua/api/championships/")
-  .then(function(response) {
-      $scope.countries = response.data.result;
-      $scope.idChampionship = $routeParams.id_championship;
-  });
-});
-
-app.controller('teamscontroler', function($scope, $http, $routeParams) {
-  $http.get("https://footballbet.com.ua/api/teams/")
-  .then(function(response) {
-      $scope.teams = response.data.result;
-      $scope.teamNumber = $routeParams.team_number;
-  });
-});
-
-app.controller('matchescontroler', function($scope, $http, $routeParams) {
-  $http.get("https://footballbet.com.ua/api/matches/")
-  .then(function(response) {
-      $scope.matches = response.data.result;
-      $scope.idMatch = $routeParams.id_match;
-  });
-});
