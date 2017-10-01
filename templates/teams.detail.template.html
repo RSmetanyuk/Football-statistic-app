@@ -11,5 +11,6 @@
   <p ng-if="teams[teamNumber].id_championship">ID чемпіонату: {{teams[teamNumber].id_championship}}</p>
   <p ng-if="teams[teamNumber].id_teams">ID команди: {{teams[teamNumber].id_teams}}</p>
   <p ng-if="teams[teamNumber].off_site">Веб сторінка: <a href="{{teams[teamNumber].off_site}}">{{teams[teamNumber].off_site}}</a></p>
-  <p ng-if="teams[teamNumber].title">Нагороди: {{teams[teamNumber].title}}</p>  
+  <p ng-if="teams[teamNumber].title">Трофеї: </p>
+  <p ng-if="teams[teamNumber].title" ng-bind-html="teams[teamNumber].title"></p>
 </div>
