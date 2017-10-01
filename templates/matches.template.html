@@ -1,3 +1,7 @@
+<form class="form-inline">
+  <label >Search</label>
+  <input type="text" ng-model="search" class="form-control" placeholder="Search">
+</form>
 <div class="container">
   <table class="tableMatches">
     <head>
@@ -6,7 +10,7 @@
       </tr>
     </head>
     <tbody>
-      <tr dir-paginate="match in matches|itemsPerPage:10">
+      <tr dir-paginate="match in matches|itemsPerPage:10|filter:search">
         <td><a href="#!matches/{{$index}}">{{match.firstTeam}} - {{match.secondTeam}}</a></td>           
       </tr>
     </tbody>

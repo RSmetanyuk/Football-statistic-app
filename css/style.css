@@ -73,8 +73,9 @@ th, td {
   border: 1px solid #c4edd8;
 }
 
-.tableMatches td { 
+.tableMatches { 
   text-align: center;
+  min-width: 250px; 
 }
 
 .tableTeams {
