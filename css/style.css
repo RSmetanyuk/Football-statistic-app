@@ -29,6 +29,20 @@ img {
   margin: 30px;
 }
 
+nav.championships .championships,
+nav.teams .teams,
+nav.matches .matches,
+nav.about .about {
+  color: #004d00;
+}
+
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:active {
+  text-decoration: none;
+}
+
 .mainContent {
   border: 1px solid #80ff80;
   border-radius: 5px;
@@ -59,15 +73,15 @@ th, td {
   border: 1px solid #c4edd8;
 }
 
-.matches td { 
+.tableMatches td { 
   text-align: center;
 }
 
-.teams {
+.tableTeams {
   min-width: 220px;
 }
 
-.championships {
+.tableChampionships {
   min-width: 225px;  
 }
 
