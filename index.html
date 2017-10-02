@@ -7,6 +7,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
   <script src="https://code.angularjs.org/1.0.2/angular-sanitize.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/headerController.js"></script>
   <script src="js/dirPagination.js"></script>
   <script src="js/championships.controler.js"></script>
   <script src="js/teams.controler.js"></script>
@@ -21,19 +22,36 @@
 
 <body ng-app="main">
 
+
+  <div class="navbar navbar-default navbar-fixed-top" ng-controller="headerController">
+    <div class="container">
+    <ul class="nav navbar-nav">
+      <li><img src="img/football.png" alt="Soccer ball"></li>
+      <li ng-class="{ active: isActive('/championships')}"><a href="#!championships">Championships</a></li>
+      <li ng-class="{ active: isActive('/teams')}"><a href="#!teams">Teams</a></li>
+      <li ng-class="{ active: isActive('/matches')}"><a href="#!matches">Matches</a></li>
+      <li ng-class="{ active: isActive('/about')}"><a href="#!about">About</a></li>
+    </ul>
+    </div>
+  </div>
+
+<!--
   <div class="container-fluid header">
     <div class="container sub-header">
       <img src="img/Logo_ball_.png" alt="Soccer ball">
       <h2>
-      <nav class="{{active}}">
+      <nav class="{{active}} navbar navbar navbar-default navbar-fixed-top">
+        <div class="container">
         <a href="#!championships" class="championships" ng-click="active='championships'">Championships</a>
         <a href="#!teams" class="teams" ng-click="active='teams'">Teams</a>
         <a href="#!matches" class="matches" ng-click="active='matches'">Matches</a>
         <a href="#!about" class="about" ng-click="active='about'">About</a>
+        </div>
       </nav>
       </h2>
     </div>
   </div>
+-->
 
   <div class="container mainContent">  
     <div ng-view></div>

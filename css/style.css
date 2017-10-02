@@ -15,40 +15,24 @@ img {
   margin: 0;
 }
 
-.header {
-  background-color: #80ff80;
-  border: 1px solid #0c0;
-  border-radius: 5px;
-}
+body { padding-top: 55px; }
 
-.sub-header img {
-  float: left;
-}
+.navbar-nav img {
+  height: 46px;
+  margin: 2px;
+  margin-right: 20px;
+} 
 
-.sub-header a {
-  margin: 30px;
-}
-
-nav.championships .championships,
-nav.teams .teams,
-nav.matches .matches,
-nav.about .about {
-  color: #004d00;
-}
-
-nav a:link,
-nav a:visited,
-nav a:hover,
-nav a:active {
-  text-decoration: none;
+.navbar-nav li {
+  font-size: 30px;
 }
 
 .mainContent {
-  border: 1px solid #80ff80;
+  border: 1px solid rgb(230, 230, 230);
   border-radius: 5px;
   margin-top: 5px;
   padding: 5px;
-  background-color: #e6ffe6;
+  background-color: rgb(251, 251, 251);
 }
 
 table {
@@ -70,7 +54,7 @@ td {
 }
 
 th, td {
-  border: 1px solid #c4edd8;
+  border: 1px solid rgb(230, 230, 230);
 }
 
 .tableMatches { 
