@@ -4,11 +4,11 @@ app.config(function($routeProvider){
   $routeProvider
   .when('/championships', {
     templateUrl:'templates/championships.template.html',
-    controller:'championshipscontroler'
+    controller:'championshipsControler'
   })
   .when('/championships/:id_championship', {
     templateUrl:'templates/championships.detail.template.html',
-    controller:'championshipscontroler'
+    controller:'championshipDetailsControler'
   })
   .when('/teams', {
     templateUrl:'templates/teams.template.html',
@@ -32,4 +32,9 @@ app.config(function($routeProvider){
   otherwise({
     redirectTo: '/championships'
   });
+});
+
+app.factory('DataFactory', function(){
+    var Data = {};
+    return Data;
 });

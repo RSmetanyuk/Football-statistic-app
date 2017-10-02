@@ -10,9 +10,9 @@
       </tr>
     </head>
     <tbody>
-      <tr dir-paginate="country in countries|filter:search|itemsPerPage:10">
+      <tr dir-paginate="country in Data.countries|filter:search|itemsPerPage:10">
         <td>
-          <img src="https://footballbet.com.ua/table/embl/{{country.title}}.jpg" height="35" width="35" /><a href="#!championships/{{country.id_championship}}">  {{country.name}}<span ng-if="country.sename"> "{{country.sename}}"</span></a>
+          <img src="https://footballbet.com.ua/table/embl/{{country.title}}.jpg" height="35" width="35" /><a href="#!championships/{{country.id_championship}}">  {{country.name}}</span></a>
         </td>
       </tr>
     </tbody>
