@@ -10,7 +10,7 @@
       </tr>
     </head>
     <tbody>
-      <tr dir-paginate="team in teams|itemsPerPage:10|filter:search">
+      <tr dir-paginate="team in teams|filter:search|itemsPerPage:10">
         <td>
           <img ng-if="team.emblema" src="https://footballbet.com.ua/teams/embl/{{team.emblema}}" height="35" width="35" />
           <img ng-if="!team.emblema" src="/img/no_logo.png" height="35" width="35" />

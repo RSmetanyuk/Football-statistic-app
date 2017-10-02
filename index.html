@@ -22,7 +22,6 @@
 
 <body ng-app="main">
 
-
   <div class="navbar navbar-default navbar-fixed-top" ng-controller="headerController">
     <div class="container">
     <ul class="nav navbar-nav">
@@ -34,24 +33,6 @@
     </ul>
     </div>
   </div>
-
-<!--
-  <div class="container-fluid header">
-    <div class="container sub-header">
-      <img src="img/Logo_ball_.png" alt="Soccer ball">
-      <h2>
-      <nav class="{{active}} navbar navbar navbar-default navbar-fixed-top">
-        <div class="container">
-        <a href="#!championships" class="championships" ng-click="active='championships'">Championships</a>
-        <a href="#!teams" class="teams" ng-click="active='teams'">Teams</a>
-        <a href="#!matches" class="matches" ng-click="active='matches'">Matches</a>
-        <a href="#!about" class="about" ng-click="active='about'">About</a>
-        </div>
-      </nav>
-      </h2>
-    </div>
-  </div>
--->
 
   <div class="container mainContent">  
     <div ng-view></div>
