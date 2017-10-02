@@ -11,7 +11,7 @@
       <tr>
         <td>{{matches[idMatch].date}}   </td>
         <td>{{matches[idMatch].title}}  </td>
-        <td>{{matches[idMatch].firstTeam}} {{matches[idMatch].firstTeamGoal}}:{{matches[idMatch].secondTeamGoal}} {{matches[idMatch].secondTeam}}</td>           
+        <td><a href="#!teams/{{matches[idMatch].idFirstTeam}}">{{matches[idMatch].firstTeam}} </a>{{matches[idMatch].firstTeamGoal}}:{{matches[idMatch].secondTeamGoal}} <a href="#!teams/{{matches[idMatch].idSecondTeam}}">{{matches[idMatch].secondTeam}}</a></td>           
       </tr>
     </tbody>
   </table>
