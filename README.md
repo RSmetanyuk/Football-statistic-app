@@ -4,4 +4,4 @@ This is angularjs application, that takes data from API http://footballbet.com.u
 
 Try this app at: https://football-statistic-app.herokuapp.com/index.html
 
-Resolved N issues: https://github.com/RSmetanyuk/Football-statistic-app/issues?q=is%3Aissue+is%3Aclosed
+Resolved N issues: https://github.com/RSmetanyuk/Football-statistic-app/issues
