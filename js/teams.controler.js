@@ -1,9 +1,9 @@
-app.controller('teamscontroler', function($scope, $http, $routeParams) {
-  $http.get("https://footballbet.com.ua/api/teams/")
-  .then(function(response) {
-      $scope.teams = response.data.result;
-      for (var i = 0; i < $scope.teams.length; i++) {
-        if ($scope.teams[i].id_teams === $routeParams.team_number) $scope.teamNumber = i;
-      };
-  });
+app.controller('teamsControler', function($scope, $http, DataFactory) {
+  $scope.Data = DataFactory;
+  if ($scope.Data.teams === undefined) {
+    $http.get("https://footballbet.com.ua/api/teams/")
+      .then(function(response) {
+        $scope.Data.teams = response.data.result;      
+      });
+  };
 });

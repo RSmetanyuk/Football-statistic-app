@@ -12,11 +12,11 @@ app.config(function($routeProvider){
   })
   .when('/teams', {
     templateUrl:'templates/teams.template.html',
-    controller:'teamscontroler'
+    controller:'teamsControler'
   })
   .when('/teams/:team_number', {
     templateUrl:'templates/teams.detail.template.html',
-    controller:'teamscontroler'
+    controller:'teamDetailsControler'
   })
   .when('/matches', {
     templateUrl:'templates/matches.template.html',

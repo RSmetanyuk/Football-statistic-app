@@ -1,16 +1,16 @@
 <div class="container">
-  <img ng-if="teams[teamNumber].emblema" src="https://footballbet.com.ua/teams/embl/{{teams[teamNumber].emblema}}" />
-  <img ng-if="!teams[teamNumber].emblema" src="/img/no_logo.png" />
-  <p ng-if="teams[teamNumber].name">Назва команди: {{teams[teamNumber].name}}</p>
-  <p ng-if="teams[teamNumber].second_name">Друга назва: {{teams[teamNumber].second_name}}</p>
-  <p ng-if="teams[teamNumber].city">Місто: {{teams[teamNumber].city}}</p>
-  <p ng-if="teams[teamNumber].foundation_year">Рік заснування: {{teams[teamNumber].foundation_year}}</p>
-  <p ng-if="teams[teamNumber].coach">Тренер: {{teams[teamNumber].coach}}</p>
-  <p ng-if="teams[teamNumber].president">Президент: {{teams[teamNumber].president}}</p>
-  <p ng-if="teams[teamNumber].home_stadion">Домашній стадіон: {{teams[teamNumber].home_stadion}}</p>
-  <p ng-if="teams[teamNumber].id_championship">ID чемпіонату: {{teams[teamNumber].id_championship}}</p>
-  <p ng-if="teams[teamNumber].id_teams">ID команди: {{teams[teamNumber].id_teams}}</p>
-  <p ng-if="teams[teamNumber].off_site">Веб сторінка: <a href="{{teams[teamNumber].off_site}}">{{teams[teamNumber].off_site}}</a></p>
-  <p ng-if="teams[teamNumber].title">Трофеї: </p>
-  <p ng-if="teams[teamNumber].title" ng-bind-html="teams[teamNumber].title"></p>
+  <img ng-if="Data.teams[teamNumber].emblema" src="https://footballbet.com.ua/teams/embl/{{Data.teams[teamNumber].emblema}}" />
+  <img ng-if="!Data.teams[teamNumber].emblema" src="/img/no_logo.png" />
+  <p ng-if="Data.teams[teamNumber].name">Назва команди: {{Data.teams[teamNumber].name}}</p>
+  <p ng-if="Data.teams[teamNumber].second_name">Друга назва: {{Data.teams[teamNumber].second_name}}</p>
+  <p ng-if="Data.teams[teamNumber].city">Місто: {{Data.teams[teamNumber].city}}</p>
+  <p ng-if="Data.teams[teamNumber].foundation_year">Рік заснування: {{Data.teams[teamNumber].foundation_year}}</p>
+  <p ng-if="Data.teams[teamNumber].coach">Тренер: {{Data.teams[teamNumber].coach}}</p>
+  <p ng-if="Data.teams[teamNumber].president">Президент: {{Data.teams[teamNumber].president}}</p>
+  <p ng-if="Data.teams[teamNumber].home_stadion">Домашній стадіон: {{Data.teams[teamNumber].home_stadion}}</p>
+  <p ng-if="Data.teams[teamNumber].id_championship">ID чемпіонату: {{Data.teams[teamNumber].id_championship}}</p>
+  <p ng-if="Data.teams[teamNumber].id_teams">ID команди: {{Data.teams[teamNumber].id_teams}}</p>
+  <p ng-if="Data.teams[teamNumber].off_site">Веб сторінка: <a href="{{teams[teamNumber].off_site}}">{{Data.teams[teamNumber].off_site}}</a></p>
+  <p ng-if="Data.teams[teamNumber].title">Трофеї: </p>
+  <p ng-if="Data.teams[teamNumber].title" ng-bind-html="Data.teams[teamNumber].title"></p>
 </div>
