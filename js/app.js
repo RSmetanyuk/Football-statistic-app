@@ -34,7 +34,13 @@ app.config(function($routeProvider){
   });
 });
 
-app.factory('DataFactory', function(){
-    var Data = {};
-    return Data;
+app.factory('DataFactory', function($http){
+  var Data = {};
+  Data.getApi = function(database) {
+    $http.get("https://footballbet.com.ua/api/".concat(database, "/"))
+    .then(function(response) {
+      Data.countries = response.data.result;    
+    });
+  };
+  return Data;
 });
