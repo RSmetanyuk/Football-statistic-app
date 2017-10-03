@@ -20,11 +20,11 @@ app.config(function($routeProvider){
   })
   .when('/matches', {
     templateUrl:'templates/matches.template.html',
-    controller:'matchescontroler'
+    controller:'matchesControler'
   })
   .when('/matches/:id_match', {
     templateUrl:'templates/matches.detail.template.html',
-    controller:'matchescontroler'
+    controller:'matchDetailsControler'
   })
   .when('/about', {
     templateUrl:'templates/about.template.html'
