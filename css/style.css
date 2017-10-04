@@ -78,6 +78,10 @@ th, td {
   text-align: center;
 }
 
+.left {
+  text-align: left;
+}
+
 dir-pagination-controls {
 
 }
