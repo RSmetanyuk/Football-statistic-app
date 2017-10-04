@@ -1,4 +1,4 @@
-app.controller('championshipsControler', function($scope, $http, DataFactory) {
+app.controller('championshipsControler', function($scope, DataFactory) {
   $scope.Data = DataFactory;
-  if ($scope.Data.countries === undefined) $scope.Data.getApi("championships");
+  if ($scope.Data.championships === undefined) $scope.Data.getApi("championships");
 });

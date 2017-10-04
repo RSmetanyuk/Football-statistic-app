@@ -1,9 +1,4 @@
-app.controller('teamsControler', function($scope, $http, DataFactory) {
+app.controller('teamsControler', function($scope, DataFactory) {
   $scope.Data = DataFactory;
-  if ($scope.Data.teams === undefined) {
-    $http.get("https://footballbet.com.ua/api/teams/")
-      .then(function(response) {
-        $scope.Data.teams = response.data.result;      
-      });
-  };
+  if ($scope.Data.teams === undefined) $scope.Data.getApi("teams");
 });
