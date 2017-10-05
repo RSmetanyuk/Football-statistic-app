@@ -4,9 +4,10 @@ app.factory('DataFactory', function($http){
     if (Data[database] === undefined) {
       $http.get("https://footballbet.com.ua/api/".concat(database, "/"))
       .then(function(response) {
-        Data[database] = response.data.result;    
+        Data[database] = response.data.result;   
       });
     };
+  return $http.get("https://footballbet.com.ua/api/".concat(database, "/"));   
   };
   return Data;
 });
