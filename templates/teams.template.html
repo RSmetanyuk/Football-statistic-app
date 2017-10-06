@@ -1,16 +1,20 @@
-<form class="form-inline">
-  <label >Search</label>
-  <input type="text" ng-model="search" class="form-control" placeholder="Search">
-</form>
 <div class="container">
   <table class="tableTeams">
     <head>
       <tr>
-        <th>Teams</th>
+        <th>
+          Teams 
+          <button type="button" class="btn btn-default btn-sm" onclick="Data.show('team-search')">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+          <form class="form-inline" id="team-search">
+            <input type="text" ng-model="search" class="form-control" placeholder="Search">
+          </form>
+        </th>
       </tr>
     </head>
     <tbody>
-      <tr dir-paginate="team in Data.teams|filter:filterValidNames|filter:search|itemsPerPage:10">
+      <tr dir-paginate="team in Data.teams|filter:filterValidNames|filter: {name: search}|itemsPerPage:10">
         <td>
           <img src="{{team.emblemaUrl}}" height="35" width="35" />
           <a href="#!teams/{{team.id_teams}}">  {{team.name}}</a>
