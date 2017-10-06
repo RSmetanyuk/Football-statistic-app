@@ -3,11 +3,11 @@
     <head>
       <tr>
         <th>
-          <span id="tableHeader">
+          <span ng-hide="searchActive">
             Teams
-            <a href="" ng-click="Data.hideById('tableHeader', 'search')"><span class="glyphicon glyphicon-search"></span></a>
+            <a href="" ng-click="searchActive = true"><span class="glyphicon glyphicon-search"></span></a>
           </span>         
-          <span class="hidden" id="search">
+          <span ng-show="searchActive">
             <form class="form-inline">
               <input type="text" ng-model="search" class="form-control" placeholder="Search">
             </form>
