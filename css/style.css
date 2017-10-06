@@ -82,6 +82,12 @@ th, td {
   text-align: left;
 }
 
-dir-pagination-controls {
+.hidden {
+  display: none;
+}
 
+.glyphicon-search {
+  float: right;
+  margin-right: 8px;
+  margin-top: 11px;
 }

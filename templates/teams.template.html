@@ -3,13 +3,15 @@
     <head>
       <tr>
         <th>
-          Teams 
-          <button type="button" class="btn btn-default btn-sm" onclick="Data.show('team-search')">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-          <form class="form-inline" id="team-search">
-            <input type="text" ng-model="search" class="form-control" placeholder="Search">
-          </form>
+          <span id="tableHeader">
+            Teams
+            <a href="" ng-click="Data.hideById('tableHeader', 'search')"><span class="glyphicon glyphicon-search"></span></a>
+          </span>          
+          <span class="hidden" id="search">
+            <form class="form-inline">
+              <input type="text" ng-model="search" class="form-control" placeholder="Search">
+            </form>
+          </span>
         </th>
       </tr>
     </head>

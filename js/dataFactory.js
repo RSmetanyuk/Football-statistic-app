@@ -17,6 +17,11 @@ app.factory('DataFactory', function($http){
     return $http.get("https://footballbet.com.ua/api/".concat(database, "/"));   
   };
 
+  Data.hideById = function(hideByIdName, unhideByIdName) {
+    document.getElementById(hideByIdName).className = "hidden";
+    document.getElementById(unhideByIdName).removeAttribute("class")
+  };
+
 
   /*
     Data.getApi = function(database) {
