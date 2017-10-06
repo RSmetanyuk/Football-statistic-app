@@ -1,6 +1,5 @@
 <div class="container">
-  <img ng-if="Data.teams[teamNumber].emblema" src="https://footballbet.com.ua/teams/embl/{{Data.teams[teamNumber].emblema}}" />
-  <img ng-if="!Data.teams[teamNumber].emblema" src="/img/no_logo.png" />
+  <img src="{{Data.teams[teamNumber].emblemaUrl}}"/>
   <p ng-if="Data.teams[teamNumber].name"><strong>Назва команди: </strong>{{Data.teams[teamNumber].name}}</p>
   <p ng-if="Data.teams[teamNumber].second_name"><strong>Друга назва: </strong>{{Data.teams[teamNumber].second_name}}</p>
   <p ng-if="Data.teams[teamNumber].city"><strong>Місто: </strong>{{Data.teams[teamNumber].city}}</p>
