@@ -17,8 +17,8 @@
       </tr>
     </head>
     <tbody>
-      <tr dir-paginate="match in Data.matches|itemsPerPage:10|filter:search">
-        <td><a href="#!matches/{{$index}}">{{match.firstTeam}} - {{match.secondTeam}}</a></td>
+      <tr dir-paginate="match in Data.matches|itemsPerPage:10|filter: {teamPair: search}">
+        <td><a href="#!matches/{{$index}}">{{match.teamPair}}</a></td>
       </tr>
     </tbody>
   </table>
