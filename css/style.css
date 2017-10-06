@@ -91,3 +91,7 @@ th, td {
   margin-right: 8px;
   margin-top: 11px;
 }
+
+#search {
+  width: 100%;
+}
