@@ -1,5 +1,6 @@
 app.controller('matchDetailsControler', function($scope, $routeParams, DataFactory) {
   $scope.Data = DataFactory;
+  $scope.Data.showContent = false;
   $scope.idMatch = $routeParams.id_match;
   $scope.Data.getApi("championships", function() {
     $scope.Data.getApi("matches", function() {
@@ -8,9 +9,10 @@ app.controller('matchDetailsControler', function($scope, $routeParams, DataFacto
           for (var j = 0; j < $scope.Data.championships.length; j++) {
             if ($scope.Data.matches[i].title.indexOf($scope.Data.championships[j].name) >= 0) {
               $scope.Data.matches[i].id_championship = $scope.Data.championships[j].id_championship;
-            };
+            };            
           };
         };
+        $scope.Data.showContent = true;
       })
     })
   })

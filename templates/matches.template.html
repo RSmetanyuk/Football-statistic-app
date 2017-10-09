@@ -1,5 +1,4 @@
-<div class="container">
-  <table class="tableMatches">
+  <table ng-show="Data.showContent" class="tableMatches">
     <head>
       <tr>
         <th>
@@ -22,9 +21,8 @@
       </tr>
     </tbody>
   </table>
-  <span us-spinner="{radius:30, width:8, length: 16}"></span>
-</div>
-<div class="centered">
+
+<div ng-show="Data.showContent" class="centered">
   <dir-pagination-controls
     max-size="5"
     direction-links="true"
