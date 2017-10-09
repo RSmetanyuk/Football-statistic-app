@@ -1,4 +1,5 @@
-var app = angular.module('main', ["ngRoute", "angularUtils.directives.dirPagination", "ngSanitize", "ngLoadingSpinner"]);
+var app = angular
+  .module('main', ["ngRoute", "angularUtils.directives.dirPagination", "ngSanitize", "ngLoadingSpinner"]);
 
 app.config(function($routeProvider){
   $routeProvider
