@@ -1,6 +1,6 @@
 app.controller('matchDetailsControler', function($scope, $routeParams, DataFactory) {
   $scope.Data = DataFactory;
-  $scope.Data.showContent = false;
+  $scope.showContent = false;
   $scope.idMatch = $routeParams.id_match;
   $scope.Data.getApi("championships", function() {
     $scope.Data.getApi("matches", function() {
@@ -12,7 +12,7 @@ app.controller('matchDetailsControler', function($scope, $routeParams, DataFacto
             };            
           };
         };
-        $scope.Data.showContent = true;
+        $scope.showContent = true;
       })
     })
   })
