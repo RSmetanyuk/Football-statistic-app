@@ -1,4 +1,4 @@
-<div class="container">
+<div ng-show="Data.showContent" class="container">
   <img src="{{Data.teams[teamNumber].emblemaUrl}}"/>
   <p ng-if="Data.teams[teamNumber].name"><strong>Назва команди: </strong>{{Data.teams[teamNumber].name}}</p>
   <p ng-if="Data.teams[teamNumber].second_name"><strong>Друга назва: </strong>{{Data.teams[teamNumber].second_name}}</p>
@@ -12,3 +12,5 @@
   <p ng-if="Data.teams[teamNumber].title"><strong>Трофеї: </strong></p>
   <p ng-if="Data.teams[teamNumber].title" ng-bind-html="Data.teams[teamNumber].title"></p>
 </div>
+
+<span us-spinner="{radius:30, width:8, length: 16}"></span>

@@ -4,6 +4,7 @@ app.factory('DataFactory', function($http){
   
   Data.getApi = function(database) {
     if (Data[database] === undefined) {
+      Data.showContent = false;
       $http.get("https://footballbet.com.ua/api/".concat(database, "/"))
       .then(function(response) {
         Data[database] = response.data.result;  
@@ -11,7 +12,8 @@ app.factory('DataFactory', function($http){
           for (var i = 0; i < Data.teams.length; i++) {
             Data.teams[i].emblemaUrl = (Data.teams[i].emblema === "" ? "/img/no_logo.png" : "https://footballbet.com.ua/teams/embl/".concat(Data.teams[i].emblema));
           }
-        };         
+        }; 
+        Data.showContent = true;        
       });
     };
     return $http.get("https://footballbet.com.ua/api/".concat(database, "/"));   
