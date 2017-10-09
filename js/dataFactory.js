@@ -1,7 +1,6 @@
 app.factory('DataFactory', function($http){
   var Data = {};
   
-  
   Data.getApi = function(database) {
     if (Data[database] === undefined) {
       $http.get("https://footballbet.com.ua/api/".concat(database, "/"))
@@ -14,7 +13,7 @@ app.factory('DataFactory', function($http){
         };         
       });
     };
-    return $http.get("https://footballbet.com.ua/api/".concat(database, "/"));   
+    //return $http.get("https://footballbet.com.ua/api/".concat(database, "/"));   
   };
 
   /*
