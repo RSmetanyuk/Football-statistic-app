@@ -1,5 +1,5 @@
 var app = angular
-  .module('main', ["ngRoute", "angularUtils.directives.dirPagination", "ngSanitize", "ngLoadingSpinner"]);
+  .module('main', ["ngRoute", "angularUtils.directives.dirPagination", "ngSanitize"]);
 
 app.config(function($routeProvider){
   $routeProvider
@@ -8,7 +8,7 @@ app.config(function($routeProvider){
     controller:'championshipsControler'
   })
   .when('/championships/:id_championship', {
-    templateUrl:'templates/championships.detail.template.html',
+    templateUrl:'templates/championship.template.html',
     controller:'championshipDetailsControler'
   })
   .when('/teams', {
@@ -16,7 +16,7 @@ app.config(function($routeProvider){
     controller:'teamsControler'
   })
   .when('/teams/:team_number', {
-    templateUrl:'templates/teams.detail.template.html',
+    templateUrl:'templates/team.template.html',
     controller:'teamDetailsControler'
   })
   .when('/matches', {
@@ -24,7 +24,7 @@ app.config(function($routeProvider){
     controller:'matchesControler'
   })
   .when('/matches/:id_match', {
-    templateUrl:'templates/matches.detail.template.html',
+    templateUrl:'templates/matche.template.html',
     controller:'matchDetailsControler'
   })
   .when('/about', {

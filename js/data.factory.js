@@ -1,9 +1,9 @@
 app.factory('DataFactory', function($http){
   var Data = {};
   
-  Data.getApi = function(database, callback) {
-
+  Data.getApi = function(database, callback) {      
       if (Data[database] === undefined) {
+        Data.spinner = new Spinner({top: '16%'}).spin(document.getElementById("main-content"));
         $http.get("https://footballbet.com.ua/api/".concat(database, "/"))
         .then(function(response) {
           Data[database] = response.data.result;  
@@ -14,8 +14,8 @@ app.factory('DataFactory', function($http){
                 "https://footballbet.com.ua/teams/embl/".concat(Data.teams[i].emblema));
             }
           };
-
-          callback();          
+          callback();
+          Data.spinner.stop();      
         });
       } else {
         callback();
