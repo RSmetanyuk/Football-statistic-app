@@ -14,7 +14,7 @@ app.factory('DataFactory', function($http){
               Data.teams[i].emblemaUrl = (Data.teams[i].emblema === "" ? "/img/no_logo.png" :
                 "https://footballbet.com.ua/teams/embl/".concat(Data.teams[i].emblema));
             }
-          };
+          }
           callback();
           Data.spinner.stop();
         });
