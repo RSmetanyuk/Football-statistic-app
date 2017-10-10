@@ -24,7 +24,7 @@ app.config(function($routeProvider){
     controller:'matchesControler'
   })
   .when('/matches/:id_match', {
-    templateUrl:'templates/matche.template.html',
+    templateUrl:'templates/match.template.html',
     controller:'matchDetailsControler'
   })
   .when('/about', {
