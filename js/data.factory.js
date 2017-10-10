@@ -4,7 +4,7 @@ app.factory('DataFactory', function($http){
   Data.getApi = function(database, callback) {      
       if (Data[database] === undefined) {
         if (Data.spinner !== undefined && Data.spinner.el !== undefined) Data.spinner.stop();
-        Data.spinner = new Spinner({top: '8%'}).spin(document.getElementById("main-content"));       
+        Data.spinner = new Spinner({top: '11%'}).spin(document.getElementById("main-content"));       
         $http.get("https://footballbet.com.ua/api/".concat(database, "/"))
         .then(function(response) {
           Data[database] = response.data.result;  
