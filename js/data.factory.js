@@ -3,7 +3,8 @@ app.factory('DataFactory', function($http){
   
   Data.getApi = function(database, callback) {      
       if (Data[database] === undefined) {
-        Data.spinner = new Spinner({top: '16%'}).spin(document.getElementById("main-content"));
+        if (Data.spinner !== undefined && Data.spinner.el !== undefined) Data.spinner.stop();
+        Data.spinner = new Spinner({top: '17%'}).spin(document.getElementById("main-content"));       
         $http.get("https://footballbet.com.ua/api/".concat(database, "/"))
         .then(function(response) {
           Data[database] = response.data.result;  
@@ -15,7 +16,7 @@ app.factory('DataFactory', function($http){
             }
           };
           callback();
-          Data.spinner.stop();      
+          Data.spinner.stop();
         });
       } else {
         callback();
